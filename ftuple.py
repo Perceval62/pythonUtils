@@ -38,7 +38,7 @@ class ftuple:
 
     def pop(self):
         # Pops the last value of a tuple
-        return self.__internal[:-1]
+        return ftuple.tuple_from(self.__internal[:-1])
 
     def car(self):
         # Returns the first element of a tuple
