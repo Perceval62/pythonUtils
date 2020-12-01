@@ -85,6 +85,8 @@ class ftuple:
             return 0
         else:
             return self.car() + self.cdr().sum()
+    def clone(self):
+        return copy.deepcopy(self.__internal)  
 
 class testFtuple(unittest.TestCase):
     def test_construction(self):
