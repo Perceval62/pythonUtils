@@ -1,4 +1,6 @@
 import unittest
+import functools
+import operator
 
 class ftuple:
     __internal = ()
@@ -8,11 +10,11 @@ class ftuple:
         self.__internal = ()
     def __str__(self):
         # toString, represents the ftuple to a string
-        return ''.join('self.__internal')
+        return ','.join(str(v) for v in self.__internal)
     def __repr__(self):
         # toStringRepr, represents the ftuple to a string. 
         # Used for proper integration in the REPL
-        return ''.join('self.__internal')
+        return ','.join(str(v) for v in self.__internal)
     def __getitem__(self, key):
         return self.__internal[key]
     def __len__(self):
